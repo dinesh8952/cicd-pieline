@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:011691600677:task-definition/cicd-task-defination:8"
+        LoadBalancerInfo:
+          ContainerName: "container1"
+          ContainerPort: 5004
